@@ -1,10 +1,11 @@
 import { Module } from '@nestjs/common';
 import { ChatController } from './chat.controller';
 import { ChatService } from './chat.service';
-import { LangChainClient } from '../../infra/llm/langchain.client';
+import { LLMModule } from '../../infra/llm/llm.module';
 
 @Module({
+  imports: [LLMModule],
   controllers: [ChatController],
-  providers: [ChatService, LangChainClient],
+  providers: [ChatService],
 })
 export class ChatModule {}

@@ -1,0 +1,109 @@
+{
+  "sections": [
+    {
+      "category": "Dogão",
+      "items": [
+        {
+          "name": "Simples",
+          "description": "Pão, salsicha, maionese, ketchup, tomate, batata palha.",
+          "price": 9.0
+        },
+        {
+          "name": "Duplo",
+          "description": "Pão, 2 salsichas, maionese, ketchup, tomate, batata palha.",
+          "price": 10.0
+        },
+        {
+          "name": "Ovo",
+          "description": "Pão, salsicha, maionese, ketchup, tomate, ovo, batata palha.",
+          "price": 11.0
+        },
+        {
+          "name": "Hambúrguer",
+          "description": "Pão, salsicha, maionese, ketchup, tomate, hambúrguer, batata palha.",
+          "price": 13.0
+        },
+        {
+          "name": "Hambúrguer de Costela",
+          "description": "Pão, salsicha, maionese, ketchup, tomate, hambúrguer de costela, batata palha.",
+          "price": 15.0
+        },
+        {
+          "name": "Hambúrguer Caseiro",
+          "description": "Pão, salsicha, maionese, ketchup, tomate, hambúrguer caseiro, batata palha.",
+          "price": 15.0
+        },
+        {
+          "name": "Alcatra",
+          "description": "Pão, salsicha, maionese, ketchup, tomate, alcatra, batata palha.",
+          "price": 17.5
+        },
+        {
+          "name": "Alcatra com Bacon",
+          "description": "Pão, salsicha, maionese, ketchup, tomate, alcatra, bacon, batata palha.",
+          "price": 18.5
+        },
+        {
+          "name": "Frango",
+          "description": "Pão, salsicha, maionese, ketchup, tomate, frango desfiado, batata palha.",
+          "price": 15.0
+        },
+        {
+          "name": "Frango com Bacon",
+          "description": "Pão, salsicha, maionese, ketchup, tomate, frango, bacon, batata palha.",
+          "price": 17.0
+        },
+        {
+          "name": "Filé de Frango",
+          "description": "Pão, salsicha, maionese, ketchup, tomate, filé de frango, batata palha.",
+          "price": 16.0
+        },
+        {
+          "name": "Limite",
+          "description": "Pão, salsicha, maionese, ketchup, bacon, calabresa, frango, hambúrguer, ovo, tomate, batata palha.",
+          "price": 20.0
+        },
+        {
+          "name": "Animal",
+          "description": "2 pães, salsicha, maionese, ketchup, tomate, bacon, frango, calabresa, hambúrguer, ovo, alcatra, cebola, batata palha.",
+          "price": 31.0
+        },
+        {
+          "name": "Charque Acebolado",
+          "description": "Pão, salsicha, maionese, ketchup, tomate, charque acebolado, batata palha.",
+          "price": 17.0
+        }
+      ]
+    },
+    {
+      "category": "Acréscimos",
+      "items": [
+        { "name": "Hambúrguer Caseiro", "description": "", "price": 4.0 },
+        { "name": "Hambúrguer Industrializado", "description": "", "price": 2.0 },
+        { "name": "Cheddar", "description": "", "price": 2.0 },
+        { "name": "Catupiry", "description": "", "price": 2.0 },
+        { "name": "Ovo", "description": "", "price": 1.0 },
+        { "name": "Mussarela", "description": "", "price": 2.0 },
+        { "name": "Presunto", "description": "", "price": 1.0 }
+      ]
+    },
+    {
+      "category": "Bebidas",
+      "items": [
+        { "name": "Coca-Cola", "description": "", "price": 4.5 },
+        { "name": "Refrigerante Lata", "description": "Sabores variados", "price": 4.5 },
+        { "name": "Suco", "description": "Sabores variados", "price": 4.5 },
+        { "name": "Água Tônica", "description": "", "price": 4.5 },
+        { "name": "H2O 500ml", "description": "", "price": 5.0 },
+        { "name": "Fanta 600ml", "description": "", "price": 5.0 },
+        { "name": "Sprite 600ml", "description": "", "price": 6.0 },
+        { "name": "Coca-Cola 600ml", "description": "", "price": 6.0 },
+        { "name": "Coca-Cola 1 litro", "description": "", "price": 7.0 },
+        { "name": "Coca-Cola 2 litros", "description": "", "price": 10.0 },
+        { "name": "Tubaina 2 litros", "description": "", "price": 6.5 },
+        { "name": "Guaraná Antarctica 2 litros", "description": "", "price": 7.5 },
+        { "name": "Água Mineral", "description": "", "price": 2.5 }
+      ]
+    }
+  ]
+}
