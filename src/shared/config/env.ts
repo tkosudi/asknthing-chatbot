@@ -1,5 +1,16 @@
-export const env = {
-  PORT: Number(process.env.PORT ?? 3000),
-  OPENAI_API_KEY: process.env.OPENAI_API_KEY ?? '',
-  OPENAI_MODEL: process.env.OPENAI_MODEL ?? 'gpt-4o-mini',
-};
+import { z } from 'zod';
+
+export const envSchema = z.object({
+  NODE_ENV: z.enum(['development', 'production', 'test']).default('development'),
+  PORT: z.coerce.number().default(3000),
+
+  OPENAI_API_KEY: z
+    .string({
+      message: 'OPENAI_API_KEY é obrigatório',
+    })
+    .min(1, 'OPENAI_API_KEY é obrigatório'),
+
+  OPENAI_MODEL: z.string().default('gpt-4o-mini'),
+});
+
+export type Env = z.infer<typeof envSchema>;
