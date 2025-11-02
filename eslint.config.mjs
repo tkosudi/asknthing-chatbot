@@ -30,13 +30,13 @@ export default tseslint.config(
       '@typescript-eslint/no-floating-promises': 'warn',
       '@typescript-eslint/no-unsafe-argument': 'warn',
 
-      "prettier/prettier": [
-        "error",
+      'prettier/prettier': [
+        'error',
         {
-          endOfLine: "auto",
+          endOfLine: 'auto',
           semi: true,
-          singleQuote: false,
-          trailingComma: "all",
+          singleQuote: true,
+          trailingComma: 'all',
           printWidth: 90,
           tabWidth: 2,
         },
