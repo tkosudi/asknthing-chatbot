@@ -1,0 +1,6 @@
+project      = "asknthing"
+location     = "brazilsouth"
+environment  = "dev"
+plan_sku     = "F1"        # se der erro de SKU/região, troque para "B1"
+node_version = "22-lts"
+# OPENAI_API_KEY = "sk-xxx" # (opcional, podemos setar via pipeline)

@@ -1,0 +1,5 @@
+project      = "asknthing"
+location     = "brazilsouth"
+environment  = "dev"
+plan_sku     = "F1"
+node_version = "22-lts"
