@@ -1,0 +1,57 @@
+name: 🚀 Deploy to Azure App Service (on main)
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  deploy:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "pnpm"
+
+      - name: Setup PNPM
+        run: corepack enable && pnpm i --frozen-lockfile
+
+      - name: Build NestJS project
+        run: pnpm build
+
+      - name: Package artifact
+        run: zip -r app.zip dist package.json pnpm-lock.yaml
+
+      - name: Login to Azure
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: ${{ secrets.AZURE_WEBAPP_NAME }}
+          package: ./app.zip
+
+      - name: Configure environment variables
+        run: |
+          az webapp config appsettings set \
+            --resource-group "${{ secrets.AZURE_RG_NAME }}" \
+            --name "${{ secrets.AZURE_WEBAPP_NAME }}" \
+            --settings \
+              NODE_ENV=production \
+              OPENAI_MODEL="${{ secrets.OPENAI_MODEL }}" \
+              OPENAI_API_KEY="${{ secrets.OPENAI_API_KEY }}"
